@@ -1,6 +1,7 @@
 import React from "react";
 import {Menu} from "lucide-react"
 import {useNavigate} from "react-router-dom";
+import dev from "../../public/dev.png"
 export const Header = ({ onMenuToggle }) => {
     const navigate=useNavigate();
     return (
@@ -9,9 +10,9 @@ export const Header = ({ onMenuToggle }) => {
                 <div className="flex items-center space-x-8">
                     <div className="flex items-center space-x-2">
                         <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">Ex</span>
+                            <span className="text-white font-bold text-sm"><img className='rounded' src={dev}/></span>
                         </div>
-                        <span className="text-white font-bold text-xl">CryptoExchange</span>
+                        <span className="text-white font-bold text-xl">pulseTrade</span>
                     </div>
                     <nav className="hidden md:flex space-x-6">
                         <a onClick={()=>{navigate("/markets")}} className="cursor-pointer text-gray-300 hover:text-white">Markets</a>
